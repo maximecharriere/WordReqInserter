@@ -6,9 +6,11 @@ Word Add-in for inserting unique requirement numbers in Word documents. Automati
 
 - **Automatic Numbering**: Generates unique requirement IDs ([REQ_0001], [REQ_0002], etc.)
 - **Smart Incrementing**: Scans document for existing requirements and continues numbering
+- **Placeholder Replacement**: Converts all [REQ_XXXX] placeholders to actual numbered requirements
 - **Bookmark Creation**: Automatically creates bookmarks for cross-referencing
-- **Style Support**: Applies REQ_TITLE style if available
+- **Style Support**: Applies `REQ_TITLE` style if available
 - **Position Independent**: Numbers based on existing requirements, not document position
+- **Insert custom template**: Insert a predefined template inside the added requirement body
 
 ---
 
@@ -17,14 +19,14 @@ Word Add-in for inserting unique requirement numbers in Word documents. Automati
 ## On Word Online:
 1. Open a Word document
 2. Go under **Home** > **Add-Ins** group > **Add-Ins** command (or search for "Add-Ins") > **Advanced...** > **Load my add-in**
-3. Upload the manifest.xml that can be found on the Shared Folder:  
-   `\\SharedFolder\OfficeAddins\manifest.xml` (replace with actual location)
+3. Upload the `manifest.xml` that can be found on the Shared Folder:
+   `\\file.espi.local\Société ESPI\00 - NEW Serveur\03 - Technique\05 - Projets\AI97 uPresage\BE Logiciel\SharedOfficeAddins\manifest.xml`
 
 ## On Word Desktop:
 1. Open Word
 2. Go under **File** > **Options** > **Trust Center** > **Trust Center Settings** > **Trusted Add-in Catalogs**
-3. Add the catalog URL:  
-   `\\SharedFolder\OfficeAddins` (replace with actual location)
+3. Add the catalog URL:
+   `\\file.espi.local\Société ESPI\00 - NEW Serveur\03 - Technique\05 - Projets\AI97 uPresage\BE Logiciel\SharedOfficeAddins`
 4. Check "Show in Menu"
 5. Restart Word Desktop
 6. Go under **Home** > **Add-Ins** group > **Add-Ins** command (or search for "Add-Ins") > **Advanced...**
@@ -47,6 +49,18 @@ Word Add-in for inserting unique requirement numbers in Word documents. Automati
 3. A unique requirement ID will be inserted in the format **[REQ_XXXX]**
 4. The ID is incremental and doesn't depend on the position in the document
 5. A bookmark is automatically created for cross-referencing
+6. A predefined template will be inserted into the requirement body
+
+## Replace All Placeholders
+
+### Convert Existing [REQ_XXXX] Placeholders
+If you already have `[REQ_XXXX]` placeholders in your document:
+
+1. Click **Home** > **ESPI** group > **Replace Placeholders** command
+2. All `[REQ_XXXX]` placeholders will be replaced with actual numbered requirements
+3. Numbering continues from existing numbered requirements in the document
+4. Each replacement gets a bookmark and style (if REQ_TITLE exists)
+5. Check the console for detailed replacement progress
 
 ## Cross-Reference to a Requirement
 
@@ -55,3 +69,9 @@ Word Add-in for inserting unique requirement numbers in Word documents. Automati
 3. Select your requirement bookmark (REQ_XXXX format)
 4. Choose to insert the **Bookmark text** in the document
 5. Click **Insert**
+
+---
+
+# Develop Office Add-In
+- Clone https://github.com/maximecharriere/WordReqInserter.git
+- After Copy file `https://maximecharriere.github.io/WordReqInserter/manifest.xml` to `\\file.espi.local\Société ESPI\00 - NEW Serveur\03 - Technique\05 - Projets\AI97 uPresage\BE Logiciel\SharedOfficeAddins\manifest.xml`

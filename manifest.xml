@@ -4,7 +4,7 @@
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>1886423f-dd43-4f4a-a200-e60e1fd6168d</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.0.0.14</Version>
   <ProviderName>maximecharriere</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="WordReqInserter" />

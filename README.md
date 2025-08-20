@@ -74,4 +74,5 @@ If you already have `[REQ_XXXX]` placeholders in your document:
 
 # Develop Office Add-In
 - Clone https://github.com/maximecharriere/WordReqInserter.git
-- After Copy file `https://maximecharriere.github.io/WordReqInserter/manifest.xml` to `\\file.espi.local\Société ESPI\00 - NEW Serveur\03 - Technique\05 - Projets\AI97 uPresage\BE Logiciel\SharedOfficeAddins\manifest.xml`
+- Check that `deploy.yml` Github Action ran successfully (https://github.com/maximecharriere/WordReqInserter/actions/workflows/deploy.yml)
+- After publish, copy file https://maximecharriere.github.io/WordReqInserter/manifest.xml to `\\file.espi.local\Société ESPI\00 - NEW Serveur\03 - Technique\05 - Projets\AI97 uPresage\BE Logiciel\SharedOfficeAddins\manifest.xml`
